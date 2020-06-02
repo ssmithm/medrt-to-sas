@@ -65,12 +65,12 @@ proc datasets library=medrts; run;
 %macro store_medrt(sqz=&squeeze);
 	%if &SQZ = Y %then %do;
 		%include "&squeeze_loc";
-		%squeeze(dsnin=MEDRTS.association, dsnout=MEDRT.ASSOCIATION);
-		%squeeze(dsnin=MEDRTS.association_qualifier, dsnout=MEDRT.association_qualifier);
-		%squeeze(dsnin=MEDRTS.concept, dsnout=MEDRT.concept);
-		%squeeze(dsnin=MEDRTS.concept_property, dsnout=MEDRT.concept_property);
-		%squeeze(dsnin=MEDRTS.concept_synonym, dsnout=MEDRT.concept_synonym);
-		%squeeze(dsnin=MEDRTS.term, dsnout=MEDRT.term);
+		%squeeze(dsnin=MEDRTS.association, dsnout=&mlib_name..ASSOCIATION);
+		%squeeze(dsnin=MEDRTS.association_qualifier, dsnout=&mlib_name..association_qualifier);
+		%squeeze(dsnin=MEDRTS.concept, dsnout=&mlib_name..concept);
+		%squeeze(dsnin=MEDRTS.concept_property, dsnout=&mlib_name..concept_property);
+		%squeeze(dsnin=MEDRTS.concept_synonym, dsnout=&mlib_name..concept_synonym);
+		%squeeze(dsnin=MEDRTS.term, dsnout=&mlib_name..term);
 	%end;
 
 	%else %do;
