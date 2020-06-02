@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<SXLEMAP name="SXLEMAP" version="1.2">
+    <TABLE name="CONCEPT">
+        <TABLE-DESCRIPTION>Concepts</TABLE-DESCRIPTION>
+        <TABLE-PATH syntax="XPath">/terminology/concept</TABLE-PATH>
+        
+        <COLUMN name="NAMESPACE">
+            <PATH syntax="XPath">/terminology/concept/namespace</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+        
+        <COLUMN name="NAME">
+            <PATH syntax="XPath">/terminology/concept/name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>300</LENGTH>
+        </COLUMN>
+                
+        <COLUMN name="CODE">
+            <PATH syntax="XPath">/terminology/concept/code</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+        
+        <COLUMN name="STATUS">
+            <PATH syntax="XPath">/terminology/concept/status</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>5</LENGTH>
+        </COLUMN>
+    </TABLE>
+    
+    <TABLE name="CONCEPT_PROPERTY">
+        <TABLE-DESCRIPTION>ConceptProperties</TABLE-DESCRIPTION>
+        <TABLE-PATH syntax="XPath">/terminology/concept/property</TABLE-PATH>
+                
+        <COLUMN name="CODE" retain="YES">
+            <PATH syntax="XPath">/terminology/concept/code</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+               
+        <COLUMN name="NAMESPACE">
+            <PATH syntax="XPath">/terminology/concept/property/namespace</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+                
+        <COLUMN name="NAME">
+            <PATH syntax="XPath">/terminology/concept/property/name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+                
+        <COLUMN name="VALUE">
+            <PATH syntax="XPath">/terminology/concept/property/value</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>30</LENGTH>
+        </COLUMN>
+    </TABLE>
+     
+    <TABLE name="CONCEPT_SYNONYM">
+        <TABLE-DESCRIPTION>ConceptSynonym</TABLE-DESCRIPTION>
+        <TABLE-PATH syntax="XPath">/terminology/concept/synonym</TABLE-PATH>
+                
+        <COLUMN name="CODE" retain="YES">
+            <PATH syntax="XPath">/terminology/concept/code</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+               
+        <COLUMN name="NAMESPACE">
+            <PATH syntax="XPath">/terminology/concept/synonym/namespace</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+                
+        <COLUMN name="NAME">
+            <PATH syntax="XPath">/terminology/concept/synonym/name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>300</LENGTH>
+        </COLUMN>
+                
+        <COLUMN name="TO_NAMESPACE">
+            <PATH syntax="XPath">/terminology/concept/synonym/to_namespace</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+                
+        <COLUMN name="TO_NAME">
+            <PATH syntax="XPath">/terminology/concept/synonym/to_name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>300</LENGTH>
+        </COLUMN>
+                
+        <COLUMN name="PREFERRED">
+            <PATH syntax="XPath">/terminology/concept/synonym/preferred</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+    </TABLE>   
+
+    <TABLE name="ASSOCIATION">
+        <TABLE-DESCRIPTION>Associations</TABLE-DESCRIPTION>
+        <TABLE-PATH syntax="XPath">/terminology/association</TABLE-PATH>
+        
+        <COLUMN name="NAMESPACE">
+            <PATH syntax="XPath">/terminology/association/namespace</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+        
+        <COLUMN name="NAME">
+            <PATH syntax="XPath">/terminology/association/name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>300</LENGTH>
+        </COLUMN>
+                
+        <COLUMN name="FROM_NAMESPACE">
+            <PATH syntax="XPath">/terminology/association/from_namespace</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+        
+        <COLUMN name="FROM_NAME">
+            <PATH syntax="XPath">/terminology/association/from_name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>300</LENGTH>
+        </COLUMN>
+        
+        <COLUMN name="FROM_CODE">
+            <PATH syntax="XPath">/terminology/association/from_code</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+        
+        <COLUMN name="TO_NAMESPACE">
+            <PATH syntax="XPath">/terminology/association/to_namespace</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="TO_NAME">
+            <PATH syntax="XPath">/terminology/association/to_name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>300</LENGTH>
+        </COLUMN>
+        
+        <COLUMN name="TO_CODE">
+            <PATH syntax="XPath">/terminology/association/to_code</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+    </TABLE>
+    
+    <TABLE name="ASSOCIATION_QUALIFIER">
+        <TABLE-DESCRIPTION>AssociationQualifiers</TABLE-DESCRIPTION>
+        <TABLE-PATH syntax="XPath">/terminology/association/qualifier</TABLE-PATH>
+                
+        <COLUMN name="FROM_CODE" retain="YES">
+            <PATH syntax="XPath">/terminology/association/from_code</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+               
+        <COLUMN name="TO_CODE" retain="YES">
+            <PATH syntax="XPath">/terminology/association/to_code</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+                
+        <COLUMN name="NAMESPACE">
+            <PATH syntax="XPath">/terminology/association/qualifier/namespace</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+                
+        <COLUMN name="NAME">
+            <PATH syntax="XPath">/terminology/association/qualifier/name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+
+        <COLUMN name="VALUE">
+            <PATH syntax="XPath">/terminology/association/qualifier/value</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+    </TABLE>
+     
+    <TABLE name="TERM">
+        <TABLE-DESCRIPTION>Terms</TABLE-DESCRIPTION>
+        <TABLE-PATH syntax="XPath">/terminology/term</TABLE-PATH>
+               
+        <COLUMN name="NAMESPACE">
+            <PATH syntax="XPath">/terminology/term/namespace</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>20</LENGTH>
+        </COLUMN>
+                
+        <COLUMN name="NAME">
+            <PATH syntax="XPath">/terminology/term/name</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>300</LENGTH>
+        </COLUMN>
+                
+        <COLUMN name="STATUS">
+            <PATH syntax="XPath">/terminology/term/status</PATH>
+            <TYPE>character</TYPE>
+            <DATATYPE>string</DATATYPE>
+            <LENGTH>5</LENGTH>
+        </COLUMN>
+     </TABLE>   
+</SXLEMAP>    
+    
+        
